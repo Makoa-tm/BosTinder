@@ -167,52 +167,52 @@ public class InterfazHombre extends JFrame {
 		eliminar.setBounds(192, 680, 162, 34);
 		eliminar.setActionCommand(ELIMINAR);
 		getContentPane().add(eliminar);
-		
+
 		JLabel lblApellido = new JLabel("Apellido:");
 		lblApellido.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblApellido.setBounds(10, 108, 76, 27);
 		getContentPane().add(lblApellido);
-		
+
 		JLabel lblSegundoApellido = new JLabel("Segundo apellido:");
 		lblSegundoApellido.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblSegundoApellido.setBounds(10, 146, 149, 27);
 		getContentPane().add(lblSegundoApellido);
-		
+
 		lblUsuario = new JLabel("Usuario:");
 		lblUsuario.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblUsuario.setBounds(10, 184, 76, 27);
 		getContentPane().add(lblUsuario);
-		
+
 		lblCorreo = new JLabel("Correo:");
 		lblCorreo.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblCorreo.setBounds(10, 222, 76, 27);
 		getContentPane().add(lblCorreo);
-		
+
 		lblContrasea = new JLabel("Contrase\u00F1a:");
 		lblContrasea.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblContrasea.setBounds(10, 260, 94, 27);
 		getContentPane().add(lblContrasea);
-		
+
 		lblNacimiento = new JLabel("Nacimiento:");
 		lblNacimiento.setFont(new Font("Monospaced", Font.BOLD, 13));
 		lblNacimiento.setBounds(10, 293, 94, 27);
 		getContentPane().add(lblNacimiento);
-		
+
 		label = new JLabel("Hombre ");
 		label.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 13));
 		label.setBounds(165, 11, 70, 35);
 		getContentPane().add(label);
-		
+
 		label_1 = new JLabel("Estatura:");
 		label_1.setFont(new Font("Monospaced", Font.BOLD, 13));
 		label_1.setBounds(10, 331, 97, 27);
 		getContentPane().add(label_1);
-		
+
 		label_2 = new JLabel("Ingresos:");
 		label_2.setFont(new Font("Monospaced", Font.BOLD, 13));
 		label_2.setBounds(10, 369, 97, 27);
 		getContentPane().add(label_2);
-		
+
 		textEstatura = new JTextField(5);
 		textEstatura.setBounds(219, 335, 135, 21);
 		getContentPane().add(textEstatura);
@@ -325,4 +325,5 @@ public class InterfazHombre extends JFrame {
 	public void setAño(JComboBox<String> año) {
 		this.año = año;
 	}
+
 }
