@@ -31,7 +31,7 @@ public class InterfazMujer extends JFrame {
 	private JLabel lblMujer;
 	private JLabel lblEstaturaopcional;
 	private JLabel lblDivorcios;
-	private JPasswordField passwordField;
+	private JTextField passwordField;
 	private JComboBox<String> boxDivorcios;
 
 	public InterfazMujer(Controlador control) {
@@ -208,7 +208,7 @@ public class InterfazMujer extends JFrame {
 		lblDivorcios.setBounds(10, 369, 97, 27);
 		getContentPane().add(lblDivorcios);
 
-		passwordField = new JPasswordField(5);
+		passwordField = new JTextField(5);
 		passwordField.setBounds(219, 335, 135, 21);
 		getContentPane().add(passwordField);
 

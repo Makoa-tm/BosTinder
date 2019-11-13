@@ -1,61 +1,43 @@
 package vista;
 
-import java.awt.BorderLayout;
+import java.awt.Dimension;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 import controlador.Controlador;
 
 public class InterfazInicio extends JFrame {
-	PanelBienvenida panelB;
-	PanelIniciar panelI;
-	PanelGenero panelGenero;
+	private JLabel fondo;
 
 	public InterfazInicio(Controlador control) {
-		setSize(700, 500);
+		setSize(420, 383);
 		setResizable(true);
 		setTitle("BosTinder");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+		getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 0, 470, 407);
+		getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setSize(new Dimension(20, 30));
+		lblNewLabel.setPreferredSize(new Dimension(15, 14));
+		lblNewLabel.setIcon(new ImageIcon("D:\\Local files\\java-2018-12\\eclipse\\Workspace\\BosTinder\\src\\images\\Icon image 3.png"));
+		lblNewLabel.setBounds(-27, -33, 524, 474);
+		panel.add(lblNewLabel);
+		
+		fondo = new JLabel("");
+		fondo.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Blue Background_2.jpg")));
+		fondo.setBounds(0, -27, 420, 405);
+		panel.add(fondo);
 
-		setLayout(new BorderLayout());
-
-		panelB = new PanelBienvenida();
-		panelI = new PanelIniciar();
-		panelGenero = new PanelGenero();
-
-		add(panelB, BorderLayout.NORTH);
-		add(panelI, BorderLayout.CENTER);
-		add(panelGenero, BorderLayout.SOUTH);
-
-		panelI.getIngresar().addActionListener(control);
-		panelGenero.getMujer().addActionListener(control);
-		panelGenero.getHombre().addActionListener(control);
+		
 
 	}
-
-	public PanelBienvenida getPanelB() {
-		return panelB;
-	}
-
-	public void setPanelB(PanelBienvenida panelB) {
-		this.panelB = panelB;
-	}
-
-	public PanelIniciar getPanelI() {
-		return panelI;
-	}
-
-	public void setPanelI(PanelIniciar panelI) {
-		this.panelI = panelI;
-	}
-
-	public PanelGenero getPanelGenero() {
-		return panelGenero;
-	}
-
-	public void setPanelGenero(PanelGenero panelGenero) {
-		this.panelGenero = panelGenero;
-	}
-
 }

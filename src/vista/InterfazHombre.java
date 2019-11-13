@@ -37,8 +37,8 @@ public class InterfazHombre extends JFrame {
 	private JTextField textEstatura;
 
 	public InterfazHombre(Controlador control) {
-		getContentPane().setBackground(new Color(240, 230, 140));
-		setSize(new Dimension(396, 498));
+		getContentPane().setBackground(new Color(255, 140, 0));
+		setSize(new Dimension(385, 489));
 		setResizable(false);
 		setTitle("Registrar");
 		setLocationRelativeTo(null);
