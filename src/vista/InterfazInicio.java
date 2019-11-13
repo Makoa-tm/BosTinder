@@ -14,12 +14,13 @@ import controlador.Controlador;
 import java.awt.Cursor;
 import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
+import javax.swing.JPasswordField;
 
 public class InterfazInicio extends JFrame {
 	private JLabel fondo_2;
-	private JTextField txtUser;
-	private JTextField txtPassword;
 	private JButton btnLogin;
+	private JTextField txtUser;
+	private JPasswordField passwordField;
 
 	public InterfazInicio(Controlador control) {
 		setSize(419, 435);
@@ -34,25 +35,26 @@ public class InterfazInicio extends JFrame {
 		getContentPane().add(panel);
 		panel.setLayout(null);
 		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(121, 235, 171, 30);
+		panel.add(passwordField);
+
 		JButton btnnoEstasIncrito = new JButton("\u00BFNo estas Incrito?");
-		btnnoEstasIncrito.setBounds(273, 353, 121, 23);
+		btnnoEstasIncrito.setFont(new Font("Nirmala UI", Font.BOLD, 10));
+		btnnoEstasIncrito.setBounds(275, 354, 121, 30);
 		panel.add(btnnoEstasIncrito);
-		
+
 		JLabel label = new JLabel("");
 		label.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Final Icon image.png")));
 		label.setBounds(75, 183, 31, 37);
 		panel.add(label);
 
 		btnLogin = new JButton("Login");
+		btnLogin.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 13));
 		btnLogin.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		btnLogin.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 		btnLogin.setBounds(138, 312, 136, 30);
 		panel.add(btnLogin);
-
-		txtPassword = new JTextField();
-		txtPassword.setColumns(10);
-		txtPassword.setBounds(121, 236, 171, 28);
-		panel.add(txtPassword);
 
 		JLabel passLogo = new JLabel("");
 		passLogo.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Password icon_2.png")));
