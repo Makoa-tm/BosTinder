@@ -11,12 +11,15 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import controlador.Controlador;
+import java.awt.Cursor;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
 public class InterfazInicio extends JFrame {
 	private JLabel fondo_2;
 	private JTextField txtUser;
 	private JTextField txtPassword;
-	private JButton btn;
+	private JButton btnLogin;
 
 	public InterfazInicio(Controlador control) {
 		setSize(419, 435);
@@ -30,10 +33,21 @@ public class InterfazInicio extends JFrame {
 		panel.setBounds(0, 0, 470, 407);
 		getContentPane().add(panel);
 		panel.setLayout(null);
+		
+		JButton btnnoEstasIncrito = new JButton("\u00BFNo estas Incrito?");
+		btnnoEstasIncrito.setBounds(273, 353, 121, 23);
+		panel.add(btnnoEstasIncrito);
+		
+		JLabel label = new JLabel("");
+		label.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Final Icon image.png")));
+		label.setBounds(75, 183, 31, 37);
+		panel.add(label);
 
-		btn = new JButton("New button");
-		btn.setBounds(138, 312, 136, 30);
-		panel.add(btn);
+		btnLogin = new JButton("Login");
+		btnLogin.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
+		btnLogin.setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+		btnLogin.setBounds(138, 312, 136, 30);
+		panel.add(btnLogin);
 
 		txtPassword = new JTextField();
 		txtPassword.setColumns(10);
@@ -46,14 +60,9 @@ public class InterfazInicio extends JFrame {
 		panel.add(passLogo);
 
 		txtUser = new JTextField();
-		txtUser.setBounds(121, 187, 171, 28);
+		txtUser.setBounds(121, 188, 171, 28);
 		panel.add(txtUser);
 		txtUser.setColumns(10);
-
-		JLabel icon_logo = new JLabel("");
-		icon_logo.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Icon image 3_.png")));
-		icon_logo.setBounds(74, 185, 30, 37);
-		panel.add(icon_logo);
 
 		JLabel lblBostinderLogin = new JLabel("BosTinder Login");
 		lblBostinderLogin.setFont(new Font("Comic Sans MS", Font.BOLD, 18));
@@ -76,6 +85,5 @@ public class InterfazInicio extends JFrame {
 		Fondo_1.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Blue Background_2.jpg")));
 		Fondo_1.setBounds(-7, 166, 620, 350);
 		panel.add(Fondo_1);
-
 	}
 }
