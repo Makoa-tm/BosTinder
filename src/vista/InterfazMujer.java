@@ -155,13 +155,8 @@ public class InterfazMujer extends JFrame {
 		registrar = new JButton("A conquistar!");
 		registrar.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 11));
 		registrar.setBounds(127, 424, 149, 34);
-		registrar.setActionCommand(REGISTRAR);
+		registrar.setActionCommand("REGISTRAR");
 		getContentPane().add(registrar);
-
-		eliminar = new JButton("Eliminar");
-		eliminar.setBounds(192, 680, 162, 34);
-		eliminar.setActionCommand(ELIMINAR);
-		getContentPane().add(eliminar);
 
 		JLabel lblApellido = new JLabel("Apellido:");
 		lblApellido.setFont(new Font("Monospaced", Font.BOLD, 13));

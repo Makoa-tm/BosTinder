@@ -82,12 +82,12 @@ public class InterfazLogin extends JFrame implements ActionListener {
 		logo.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Icon image 3.png")));
 		logo.setSize(new Dimension(20, 30));
 		logo.setPreferredSize(new Dimension(15, 14));
-		logo.setBounds(141, 11, 121, 114);
+		logo.setBounds(156, 22, 85, 108);
 		panel.add(logo);
 
 		fondo_2 = new JLabel("");
-		fondo_2.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Blue Background_2.jpg")));
-		fondo_2.setBounds(-5, -18, 620, 350);
+		fondo_2.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/elegant-red-background_1340-4770.jpg")));
+		fondo_2.setBounds(-7, -24, 620, 420);
 		panel.add(fondo_2);
 
 		JLabel Fondo_1 = new JLabel("");
