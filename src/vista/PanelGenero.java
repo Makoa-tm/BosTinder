@@ -17,15 +17,17 @@ public class PanelGenero extends JFrame {
 	private JButton btnHombre;
 
 	public PanelGenero() {
+//		setLocationByPlatform(true);
 		setResizable(false);
 		setTitle("BosTinder");
-		setDefaultCloseOperation(HIDE_ON_CLOSE);
-		setLocationRelativeTo(null);
-		setSize(431, 276);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+		setSize(458, 294);
 		getContentPane().setLayout(null);
+		setLocationRelativeTo(null);
 
 		contenedor = new JPanel();
-		contenedor.setBounds(0, 0, 426, 246);
+		contenedor.setBounds(0, 0, 452, 265);
 		getContentPane().add(contenedor);
 		contenedor.setLayout(null);
 
@@ -58,7 +60,7 @@ public class PanelGenero extends JFrame {
 
 		fondo = new JLabel("");
 		fondo.setIcon(new ImageIcon(PanelGenero.class.getResource("/images/elegant-red-background_1340-4770.jpg")));
-		fondo.setBounds(0, 0, 426, 246);
+		fondo.setBounds(0, 0, 451, 265);
 		contenedor.add(fondo);
 		setVisible(true);
 	}
