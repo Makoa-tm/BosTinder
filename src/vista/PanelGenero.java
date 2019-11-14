@@ -1,57 +1,45 @@
 package vista;
 
-import java.awt.Font;
-import java.awt.GridLayout;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JButton;
+import javax.swing.border.SoftBevelBorder;
+import javax.swing.border.BevelBorder;
 
-public class PanelGenero extends JPanel{
-	
-	private JLabel text1, text2;
-	private JButton mujer, hombre;
-	private Font fuente;
-	public static final String MUJER = "mujer";
-	public static final String HOMBRE = "hombre";
-	
+public class PanelGenero extends JFrame {
+	private JPanel contenedor;
+
 	public PanelGenero() {
-		setLayout(new GridLayout(2, 2));
-		fuente = new Font("Helvetica", Font.BOLD, 50);
+		setResizable(false);
+		setTitle("BosTinder");
+		getContentPane().setLayout(null);
 		
-		text1 = new JLabel("No te has");
-		text2 = new JLabel(" Registrado?");
-		text1.setFont(fuente);
-		text2.setFont(fuente);
-		add(text1);
-		add(text2);
+		contenedor = new JPanel();
+		contenedor.setBounds(0, 0, 448, 264);
+		getContentPane().add(contenedor);
+		contenedor.setLayout(null);
 		
-		mujer = new JButton("M");
-		mujer.setActionCommand(MUJER);
-		add(mujer);
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 13));
+		lblNewLabel.setBounds(143, 11, 143, 25);
+		contenedor.add(lblNewLabel);
 		
-		hombre = new JButton("H");
-		hombre.setActionCommand(HOMBRE);
-		add(hombre);
+		JButton btnHombre = new JButton("Hombre");
+		btnHombre.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 12));
+		btnHombre.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
+		btnHombre.setActionCommand("HOMBRE");
+		btnHombre.setBounds(27, 63, 172, 167);
+		contenedor.add(btnHombre);
 		
-		
-	}
+		JButton btnMujer = new JButton("Mujer");
+		btnMujer.setFont(new Font("MS Reference Sans Serif", Font.BOLD, 13));
+		btnMujer.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
+		btnMujer.setActionCommand("MUJER");
+		btnMujer.setBounds(231, 64, 172, 167);
+		contenedor.add(btnMujer);
 
-	public JButton getMujer() {
-		return mujer;
 	}
-
-	public void setMujer(JButton mujer) {
-		this.mujer = mujer;
-	}
-
-	public JButton getHombre() {
-		return hombre;
-	}
-
-	public void setHombre(JButton hombre) {
-		this.hombre = hombre;
-	}
-	
 
 }

@@ -19,14 +19,14 @@ import javax.swing.border.SoftBevelBorder;
 import javax.swing.border.BevelBorder;
 import javax.swing.JPasswordField;
 
-public class InterfazInicio extends JFrame implements ActionListener {
+public class InterfazLogin extends JFrame implements ActionListener {
 	private JLabel fondo_2;
 	private JButton btnLogin;
 	private JTextField txtUser;
 	private JPasswordField passwordField;
 	private JButton btnRegistrarse;
 	PanelGenero genero;
-	public InterfazInicio(Controlador control) {
+	public InterfazLogin(Controlador control) {
 		setSize(419, 435);
 		setResizable(true);
 		setTitle("BosTinder");
@@ -51,7 +51,7 @@ public class InterfazInicio extends JFrame implements ActionListener {
 		panel.add(btnRegistrarse);
 
 		JLabel iconImage = new JLabel("");
-		iconImage.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Final Icon image.png")));
+		iconImage.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Final Icon image.png")));
 		iconImage.setBounds(75, 183, 31, 37);
 		panel.add(iconImage);
 
@@ -64,7 +64,7 @@ public class InterfazInicio extends JFrame implements ActionListener {
 		panel.add(btnLogin);
 
 		JLabel passLogo = new JLabel("");
-		passLogo.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Password icon_2.png")));
+		passLogo.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Password icon_2.png")));
 		passLogo.setBounds(75, 235, 29, 30);
 		panel.add(passLogo);
 
@@ -79,19 +79,19 @@ public class InterfazInicio extends JFrame implements ActionListener {
 		panel.add(lblBostinderLogin);
 
 		JLabel logo = new JLabel("");
-		logo.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Icon image 3.png")));
+		logo.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Icon image 3.png")));
 		logo.setSize(new Dimension(20, 30));
 		logo.setPreferredSize(new Dimension(15, 14));
 		logo.setBounds(141, 11, 121, 114);
 		panel.add(logo);
 
 		fondo_2 = new JLabel("");
-		fondo_2.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Blue Background_2.jpg")));
+		fondo_2.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Blue Background_2.jpg")));
 		fondo_2.setBounds(-5, -18, 620, 350);
 		panel.add(fondo_2);
 
 		JLabel Fondo_1 = new JLabel("");
-		Fondo_1.setIcon(new ImageIcon(InterfazInicio.class.getResource("/images/Blue Background_2.jpg")));
+		Fondo_1.setIcon(new ImageIcon(InterfazLogin.class.getResource("/images/Blue Background_2.jpg")));
 		Fondo_1.setBounds(-7, 166, 620, 350);
 		panel.add(Fondo_1);
 	}

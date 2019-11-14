@@ -12,12 +12,12 @@ import modelo.Persona;
 import vista.InterfazAdmin;
 import vista.InterfazBosTinder;
 import vista.InterfazHombre;
-import vista.InterfazInicio;
+import vista.InterfazLogin;
 import vista.InterfazMujer;
 
 public class Controlador implements ActionListener {
 
-	InterfazInicio guiInicio;
+	InterfazLogin guiInicio;
 	InterfazHombre guiHombre;
 	InterfazMujer guiMujer;
 	InterfazBosTinder guiBosTinder;
@@ -30,7 +30,7 @@ public class Controlador implements ActionListener {
 
 		m = new Mundo();
 		m.getArchivo().leerArchivo();
-		guiInicio = new InterfazInicio(this);
+		guiInicio = new InterfazLogin(this);
 		guiHombre = new InterfazHombre(this);
 		guiMujer = new InterfazMujer(this);
 		guiBosTinder = new InterfazBosTinder(this);
